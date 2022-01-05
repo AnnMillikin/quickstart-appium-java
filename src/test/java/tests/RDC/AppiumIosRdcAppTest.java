@@ -28,6 +28,9 @@ import static tests.Config.region;
 /**
  * multi-threaded iosDriver
  * Runs an ios app that is loaded on SauceLabs apps.
+ *
+ * When using a free account, set the ios device to iphone.*
+ *
  */
 public class AppiumIosRdcAppTest {
 
