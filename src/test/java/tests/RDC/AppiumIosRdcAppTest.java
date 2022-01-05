@@ -25,6 +25,10 @@ import java.util.Map;
 
 import static tests.Config.region;
 
+/**
+ * multi-threaded iosDriver
+ * Runs an ios app that is loaded on SauceLabs apps.
+ */
 public class AppiumIosRdcAppTest {
 
     private static ThreadLocal<IOSDriver> iosDriver = new ThreadLocal<IOSDriver>();
@@ -56,7 +60,7 @@ public class AppiumIosRdcAppTest {
         URL url = new URL(SAUCE_REMOTE_URL);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "iPhone 8.*");
+        capabilities.setCapability("deviceName", "iPhone.*");
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability("automationName", "XCuiTest");
         capabilities.setCapability("app", "storage:filename="+appName); // or "storage:"+appID
